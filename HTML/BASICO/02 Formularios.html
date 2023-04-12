@@ -7,6 +7,193 @@
     <title>02 Formularios</title>
 </head>
 <body>
+
+    <!-- Formularios con "form" -->
+    <form>
+
+
+        <!--Lavel para colocar "texto"-->
+        <label>Nombre</label>
+
+
+        <!--input para colocar la informacion-->
+        <input ><br>
+
+        <hr>
+        <!--Forma para que se selecione el formulario el "for" ligue al input el 
+            "id" lo hara un identificador unico
+            "class" lo identificara para css-->
+        <br>
+        <label for="nombre" >Junto</label>
+        <input id="nombre"><br><br>
+
+
+        <!-- La propiedad "name" permite contener la llave y
+             el valor (llave = name , valor=informacion dentro del input), "valuo" añade datos por defecto-->
+        <input id="nombre" name="nombreA" value="Hola"><br><br>
+
+
+        <!--placeholder para poner texto en el input que puede desaparecer-->
+        <input placeholder="Coloca informacio aqui!!"><br><br>
+
+
+
+        <hr>
+        <h3>Tipos de inputs</h3>
+        <!--La propiedad type permite cambiar el valor del input-->
+            
+
+        <!--Para texto es "text"-->
+        <label for="texto1">Nombre</label>
+        <input type="text" name="texto1" id="texto1"><br><br>
+
+
+        <!--Para emall es "email"-->
+        <label for="email1">Email</label>
+        <input type="email" name="email1" id="email1"><br><br>
+
+
+        <!--Para contraseñas es "password"-->
+        <label for="ipass">Contraseña</label>
+        <input type="password" name="ipass" id="ipass"><br><br>
+
+        <!--Para numeros es "number"-->
+        <label for="numer1">Numero</label>
+        <input type="number" name="numer1" id="numer1"><br><br>
+
+
+        <!--Para numeros es "number" con un maximo y minimo-->
+        <label for="numer1">Numero</label>
+        <input type="number" name="numer1" id="numer1" min="1" max="10"><br><br>
+
+
+        <!--Para Telefono es "number"-->
+        <label for="telefono1">Telefono</label>
+        <input type="tel" name="telefono1" id="telefono1"><br><br>
+
+        
+
+        <hr>
+        <!--Para botones es "submit" y se coloca value para darle un nombre-->
+        <input type="submit" name="button1" id="button1" value="Boton submit"><br><br>
+
+
+        <!--Para boton que resetea la informacion de la pagina es "reset"-->
+        <input type="reset" name="button2" id="button2" value="Reset"><br><br>
+
+
+        <!--Para boton normal es "button"-->
+        <input type="button" name="button3" id="button3" value="Boton!! button"><br><br>
+
+
+        <!--Para boton normal con alerta "button" y alert-->
+        <input type="button" name="button3" id="button3" value="Boton!! aleart"  onclick="alert('Hola usuario')" ><br><br>
+
+
+        <!--Uso de etiqueta "button"-->
+        <button>Boton normal</button><br><br>
+
+
+        <!--Uso de etiqueta "button" con imagenes-->
+        <button><img src="Imagen/HolaMundo.jpg" width="100"></button><br><br>
+
+
+
+        <hr>
+        <!--Para selecion de un solo objeto es "radio" tiene que tener el mismo name el conjunto-->
+        <input type="radio" name="colores" value="Rojo" id="red">
+        <label for="red">Rojo</label><br><br>
+
+        <input type="radio" name="colores" value="Verde" id="Verde">
+        <label for="Verde">Verde</label><br><br>
+
+        <input type="radio" name="colores" value="Azul" id="Azul">
+        <label for="Azul">Azul</label><br><br>
+
+
+
+        <hr>
+        <!--Para selecion de multiples objeto es "checkbox" tiene que tener diferente el name el conjunto, 
+            son como una caja-->
+        <input type="checkbox" name="red1" value="Rojo1" id="red1">
+        <label for="red1">Rojo</label><br><br>
+
+        <input type="checkbox" name="Verde1" value="Verde1" id="Verde1">
+        <label for="Verde1">Verde</label><br><br>
+
+        <input type="checkbox" name="Azul1" value="Azul1" id="Azul1">
+        <label for="Azul1">Azul</label><br><br>
+        
+
+
+        <hr>
+        <!--Colores, rangos y busquedas-->
+        <!-- Para selecion de todos los colores-->
+        <input type="color" name="color"><br><br>
+
+
+        <!--Para rangos normales "range"-->
+        <input type="range" name="range1"><br><br>
+
+
+        <!--Para rangos con limites "range"-->
+        <input type="range" name="range2" min="0" max="5"><br><br>
+
+
+        <!--Para busquedas en la pagina "search"-->
+        <label>Busqueda</label>
+        <input type="search" name="search1">
+
+
+
+
+        <hr>
+        <!--Para fechas-->
+        <!--Para añadir horas "time"-->
+        <input type="time" name="horas1"><br><br>
+
+
+        <!---->
+        <input type="week" name="semana1"> <br><br>
+
+
+        <!--Para selecionar un mes y año "month"-->
+        <input type="month" name="mes1"><br><br>
+
+
+        <!-- Fecha con dia, mes y años "date"-->
+        <input type="date" name="fecha1"><br><br>
+
+
+        <!-- Fecha con dia, mes, años y horarios "datetime-local"-->
+        <input type="datetime-local" name="fecha2"><br><br>
+
+
+
+        <hr>
+        <!--Para subir archivos-->
+        <!--Subir archivos con "file"-->
+        <input type="file" name="file"><br><br>
+        
+
+        <!--Subir url-->
+        <label>URL</label>
+        <input type="url" name="url1"><br><br>
+
+
+        <!--Para un texto muy largo usa etiqueta "textarea"-->
+        <textarea id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea><br><br>
+
+
+        <!--Para un texto muy largo usa etiqueta "textarea" con tamaño especifico "cols" columnas y "rows" altura-->
+        <textarea cols="50" rows="10" id="comentario" name="comentario" placeholder="Ingrese su comentario"></textarea><br><br>
+
+        <hr>
+
+
+
+
+    </form>
     
 </body>
 </html>
