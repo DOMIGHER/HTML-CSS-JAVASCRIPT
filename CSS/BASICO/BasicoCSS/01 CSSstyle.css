@@ -1,0 +1,53 @@
+/** Se puede selecionar a la "etiqueta" para dar ese formato universal**/
+h1{
+    color: tomato;
+}
+
+
+
+/** Selecion atravez de un "Id" */
+#parrafo0{
+    color: seagreen;
+}
+
+
+/** Selecion de una "clase" para un solo objeto */
+.parrafo1{
+    color: rebeccapurple;
+}
+
+
+
+/** Selecion de etiqueta y clase*/
+p.texto{
+    color: blueviolet;
+}
+
+
+/** Es importante el orden en que se ejecuta*/
+p.especial{
+    color: chartreuse;
+}
+
+
+/** Seleciona un "div" y un hijo "p" se le asigna el color */
+div p {
+    color: darkmagenta;
+}
+
+
+/** Selecion de un "div" y un hijo "h2" */
+div h2{
+    color: aqua;
+}
+
+/** Selecion de un multiple*/
+div h2, div h3{
+    color: blue;
+}
+
+/** Selecion universal "*", texto "font-size" y color*/
+* {
+    font-size: 24px;
+    color: black;
+}
