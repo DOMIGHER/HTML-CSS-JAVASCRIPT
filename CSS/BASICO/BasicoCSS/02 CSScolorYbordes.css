@@ -1,0 +1,68 @@
+/** Colores con valores Hexadecimales
+f00 = rojo
+0f0 = verde
+00f = azul
+*/
+.color1 {
+    color: #f0f;
+}
+
+/* Colore con 6 digitos Hexadecimales
+*/
+.color2 {
+    color: #fff000;
+}
+
+/* Colores RGB de numeros con una maximo de 255
+1 posicion = rojo
+2 posicion = verde
+3 posicion = azul
+*/
+.color3 {
+    color: rgb(32, 234, 123);
+
+}
+
+
+/* poner borde implica: El pixel,El color y es estilo*/
+
+.bord1 {
+    border: 5px rgb(194, 17, 17) solid;
+}
+
+.bord2{
+    /*Selecion del estilo del borde */
+    border-style: solid;
+    
+    /* Selecion de color del borde */
+    border-color: blue;
+
+    /* Selecion del borde redondiado en pixeles*/
+    border-radius: 5px;
+
+    /* Selecion del ancho del borde */
+    border-width: 2px;
+}
+
+.bord3{
+    border-style: ridge;
+    border-color: crimson;
+    border-radius: 5px;
+
+    /* Medidas
+    mm = milimetros
+    in = pulgadas
+    px = pixeles
+    pt = <pulgada
+    pc = 12 puntos
+    em = 2veces el tamaño de la fuente de texto
+    rem = Tamaño de la fuente raiz (HTML)
+    */
+    border-width: 5mm;
+}
+/* Altera el fondo "background-color" y la opacidad "opacity" */
+#fondo1{
+    background-color: crimson;
+    opacity: 0.3;
+
+}
