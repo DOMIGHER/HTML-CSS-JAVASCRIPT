@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento Vue 2</title>
+
+
+
+</head>
+<body>
+
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <input type="text" :value="texto" @input="onInput">
+    <p>{{texto}}</p>
+
+    <ul >
+        <li v-for="alumno in alumnos">
+          {{alumno.nombre}} - {{alumno.telefono}}
+
+        </li>
+    </ul>
+
+    <select>
+      <option v-for="a in alumnos">
+        {{a.nombre}} - {{a.telefono}}
+      </option>
+    </select>
+
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>TELEFONO</th>
+        <th>SEXO</th>
+      </thead>
+      <tbody>
+        <tr  v-for="alumno in alumnos">
+          <td>{{alumno.id}}</td>
+          <td>{{alumno.nombre}}</td>
+          <td>{{alumno.telefono}}</td>
+          
+          <td>{{alumno.sexo}}
+          <div v-for="alumno.sexo=='H'">
+            Es hombre
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+        </div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        texto:'',
+        alumnos:[
+          {id:1,nombre:"Dom",telefono:"123456789",sexo:"M"},
+          {id:2,nombre:"Alfa",telefono:"23143243",sexo:"M"},
+          {id:3,nombre:"Beta",telefono:"123478544",sexo:"F"},
+          {id:4,nombre:"Steren",telefono:"634565363",sexo:"F"},
+        ]
+   
+      }
+    },
+
+    methods:{
+        onInput(e){
+          this.texto =e.target.value
+        }
+    }
+
+  }).mount('#app')
+</script>
+
+    
+    
+</body>
+</html>
+

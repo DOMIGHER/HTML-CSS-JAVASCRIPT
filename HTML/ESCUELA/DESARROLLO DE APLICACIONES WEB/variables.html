@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento javascript</title>
+
+    <script type="text/javascript">
+        let contador = 1;
+        let contador2 = contador * 4;
+        function cambiar(){
+            document.getElementById('encabezado').innerHTML="Valor despues de ejecutar";
+        }
+
+        function suma(){
+            document.getElementById('variable').innerHTML=contador++;
+        }
+        
+        function suma1(){
+            document.getElementById('variable1').innerHTML=contador++;
+        }
+
+        function mult(){
+            document.getElementById('mult1').innerHTML=contador2;   
+        }
+
+    
+
+
+    </script>
+
+</head>
+<body>
+
+   
+    
+    <h1 id="encabezado" onclick="cambiar()">Valor antes de modificar</h1>
+
+    <p id="variable" onclick="suma()">1</p>
+    <h2 id="variable1" onclick="suma1()">1</h2>
+
+    <h1 id="mult1" onclick="mult()">4</h1>
+
+
+
+
+
+</body>
+</html>
+
+

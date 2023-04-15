@@ -1,0 +1,68 @@
+.trasparent, .efecto{
+    opacity: .5;
+}
+
+.efecto:hover{
+    opacity: 1;
+
+}
+
+.transicio{
+    width: 100px;
+    height: 100px;
+    background: black;
+    transition: width 4s;
+    transition-timing-function: ease-out;
+}
+
+.transicio:hover{
+    width: 500px;
+    background: yellow;
+}
+
+@keyframes ejemplo1{
+    from{background: red;}
+    to{background: gray;}
+}
+
+.degradado{
+    width: 200px;
+    height: 100px;
+    background:  red;
+    animation: ejemplo1 5s;
+}
+
+@keyframes ejemplo2{
+    from{background: url(../img/SOUL.png);}
+    to{background: url(../img/sopa.jpg);
+    height: 900px;
+    width: 900px;
+    }
+    
+}
+
+.degradado2{
+    width: 900px;
+    height: 900px;
+    background:  url(../img/SOUL.png) no-repeat;
+    animation: ejemplo2 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes ejemplo3{
+    0%{background-color: aqua;}
+    20%{background-color: aquamarine;}
+    40%{background-color: cadetblue;}
+    60%{background-color: darkslategray;}
+    80%{background-color: darkgoldenrod;}
+    100%{background-color: dodgerblue;}
+
+    }
+    
+    .degradado3{
+        width: 400px;
+        height: 400px;
+        animation: ejemplo3;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }

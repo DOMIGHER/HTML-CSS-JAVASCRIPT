@@ -1,0 +1,100 @@
+.contenedor{
+    width: 90%;
+    height: 100px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #f00;
+}
+
+.izquierdo{
+    width: 49%;
+    height: 50px;
+    border: 2px solid #ff0;
+    display: inline;
+    float: left;
+}
+
+.derecho{
+    width: 49%;
+    height: 50px;
+    border: 2px solid #f0f;
+    display: inline;
+    float: right;
+}
+
+
+
+
+.contenedor1{
+    width: 90%;
+    height: 400px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #f00;
+}
+
+.izquierdo1{
+    width: 49%;
+    display: inline;
+    float: left;
+}
+
+.derecho1{
+    width: 49%;
+    display: inline;
+    float: right;
+}
+
+
+
+
+.contenedor2{
+    text-align: justify;
+    width: 90%;
+    height: 400px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #f00;
+}
+
+.izquierdo2{
+    width: 48%;
+    padding: 10px;
+    display: inline;
+    float: left;
+}
+
+.derecho2{
+    width: 48%;
+    padding: 10px;
+    float: left;
+    
+}
+
+
+.contenedor-absoluto{
+    width: 200%;
+    height: 200px;
+    background-color: #f00;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    top: 30px;
+    left: 300px;
+    opacity: .5;
+}
+
+.izquierdo-absoluto{
+    width: 48%;
+    padding: 10px;
+    display: inline;
+    float: left;
+    opacity: 15%;
+}
+
+.derecho-absoluto{
+    width: 48%;
+    padding: 10px;
+    float: left;
+    
+}

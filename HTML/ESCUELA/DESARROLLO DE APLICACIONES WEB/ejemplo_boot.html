@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <style>
+        .divVerde{
+            height: 150px;
+            color: white;
+            background: green;
+            text-align: center;
+        }
+    </style>
+
+
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-6">Izquierda1</div>
+            <div class="col-6">Derecha1</div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-4">Izquierda2</div>
+             <div class="col-4">Derecha2</div>
+             <div class="col-4">Centro2</div>
+        </div>
+
+        <div class="row divVerde">
+        <div class="col-4">Izquierda3</div>
+         <div class="col-4">Derecha3</div>
+         <div class="col-4">Centro3</div>
+        </div> 
+
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-primary position-relative">
+            Inbox
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99+
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+    </div>
+
+    <div>
+        <span class="badge rounded-pill text-bg-dark">Dark</span>
+    </div>
+
+    <div>
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+          </div>
+    </div>
+
+
+
+    <div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+          </nav>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

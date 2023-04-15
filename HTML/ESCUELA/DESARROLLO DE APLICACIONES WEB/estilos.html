@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+               
+            .lampara{
+                width: 100px; height: 100px; background: gray; border: 1px solid;
+            }
+            
+    </style>
+
+<script type="text/javascript">
+
+function prender(){
+    document.getElementById('lampara').style.background="yellow"
+    document.getElementById('lampara').style.background="2px solid violet"
+}
+
+function apagar(){
+    document.getElementById('lampara').style.background="gray"
+    document.getElementById('lampara').style.background="2px solid red"
+
+}
+</script>
+
+</head>
+<body>
+    
+
+    <div id="lampara" class="lampara"></div>
+    <p onclick="prender()">Prender</p>
+    <p onclick="apagar()">Apagar</p>
+</body>
+</html>
