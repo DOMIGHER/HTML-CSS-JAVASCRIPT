@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="vierport" content="width=device-width, initial-scañe=1"> 
+    <Title></Title>
+
+</head>
+<body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<style type="text/css">
+    .rojo{color: red;}
+    .verde{color: green;}
+</style>
+
+
+<div id="app">
+            <h1 :class="cmsj">{{ message }}</h1>
+            {{ contador }}
+            <button @Click="sumar()">Sumar contador</button>
+</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+        contador: 0,
+        cmsj:"rojo"
+      }
+    },
+    methods:{
+        sumar(){
+            this.contador++;
+            if (this.contador %2 == 0){
+                this.message = "Es par"
+                this.cmsj ="verde"
+            }else{
+                this.message = "Es impar"
+                this.cmsj="rojo"
+            }
+        }
+    }
+  }).mount('#app')
+</script>
+    
+</body>
+</html>

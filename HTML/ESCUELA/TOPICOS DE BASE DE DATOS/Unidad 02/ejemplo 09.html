@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>NASA</title>
+</head>
+<body>
+
+    <div id="app">
+        <div class="container">
+            <div id="imgtitle"></div>
+            <img :src="imgserv" class="card-img-top">      
+            <div id="imgtext"></div>
+            
+        </div>
+    </div>
+
+   <script>
+ apynasaket = "DkHoNnpIbdSA5Qq7QOLIYfmqNxAo1OMSnmOc44W9";
+    var url ="https://api.nasa.gov/planetary/apod?api_key=${Nasa_API}";
+        new Vue ({
+            el:'#app',
+            data:{
+                imgserv: "",
+                imgtitle:"",
+                imgtext:"" 
+            },
+        });
+        axius.get(url).then(function(responsive){
+            vm.imgserv = responsive.data.url;
+            vm.imgtitle = responsive();
+            vm.imgtext = responsive();
+        });
+    </script> 
+</body>
+</html>

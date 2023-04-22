@@ -1,0 +1,26 @@
+<meta name="vierport" content="width=device-width, initial-scañe=1"> 
+<Title></Title>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<div id="app">{{ message }}
+            {{ contador }}
+            <button @Click="sumar()">Sumar contador</button>
+</div>
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+        contador: 0
+      }
+    },
+    methods:{
+        sumar(){
+            this.contador = this.contador+2;
+        }
+    }
+  }).mount('#app')
+</script>
