@@ -4,13 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MongoDB</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-
-   <script>
     
-   </script>
+
+    <div id="app">
+        <!--Uso del script(Vista del navegador)-->
+        {{ message }}</div>
+    
+    <script>
+      const { createApp } = Vue
+    
+      createApp({
+        data() {
+          return {
+              //Uso de variables
+            message: 'Hello Vue!'
+          }
+        },
+        //Se añaden los metodos para obtener los archivos
+        methods :{
+            
+            }
+      }).mount('#app')
+    </script>
     
 </body>
 </html>

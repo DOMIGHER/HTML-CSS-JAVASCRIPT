@@ -10,29 +10,37 @@
 <body>
 
     <div id="app">
-        <div class="container">
-            <div id="imgtitle"></div>
-            <img :src="imgserv" class="card-img-top">      
-            <div id="imgtext"></div>
-            
-        </div>
+        <h1 id="titulo">{{title}}</h1>
+        <p id="fecha">{{datetime}}</p>
+        <p id="explicacion">{{explicacion}}</p>
+        
+        <img :src="multimedia" height="300" width="300">{{imgserv}}</img>
+        
+        
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <script>
- apynasaket = "DkHoNnpIbdSA5Qq7QOLIYfmqNxAo1OMSnmOc44W9";
-    var url ="https://api.nasa.gov/planetary/apod?api_key=${Nasa_API}";
-        new Vue ({
+       
+       var nasakey = 'EaBcSVNN8eul7OeT5r9m979qUMlFL9quguh6Pemn';
+       var url = 'https://api.nasa.gov/planetary/apod?api_key=' + nasakey;
+ 
+       new Vue ({
             el:'#app',
             data:{
-                imgserv: "",
-                imgtitle:"",
-                imgtext:"" 
+                title: '',
+                datetime: '',
+                explicacion: '',
+                imgserv: ''
             },
-        });
-        axius.get(url).then(function(responsive){
-            vm.imgserv = responsive.data.url;
-            vm.imgtitle = responsive();
-            vm.imgtext = responsive();
+            mounted() {
+                axios.get(url).then(response => {
+                    this.title = response.data.title;
+                    this.datetime = response.data.date; 
+                    this.explicacion = response.data.explanation;
+                    this.imgserv = response.data.multimedia;
+                });
+            }
         });
     </script> 
 </body>
