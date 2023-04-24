@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokedex</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="pokemon in pokemons" v-on:click="muestraPokemon(pokemon)">
+          {{ pokemon.name }}
+        </li>
+      </ul>
+      <div v-if="elegirPokemon">
+        <h1>{{ elegirPokemon.name }}</h1>
+        <img v-bind:src="elegirPokemon.imageUrl" v-bind:alt="elegirPokemon.name" />
+        <p v-for="(value, key) in elegirPokemon.characteristics">
+          {{ key }}: {{ value }}
+        </p>
+      </div>
+    </div>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          pokemons: [],
+          elegirPokemon: null
+        },
+        methods: {
+          muestraPokemon: function(pokemon) {
+            var url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.id;
+            axios.get(url).then(response => {
+              this.elegirPokemon = {
+                name: response.data.name,
+                imageUrl: response.data.sprites.front_default,
+                characteristics: {
+                  "Altura": response.data.height,
+                  "Peso": response.data.weight,
+                  "Tipo": response.data.types.map(type => type.type.name).join(", ")
+                }
+              };
+            });
+          }
+        },
+        mounted: function() {
+          for (var i = 1; i <= 15; i++) {
+            var id = Math.floor(Math.random() * 151) + 1;
+            var url = "https://pokeapi.co/api/v2/pokemon/" + id;
+            axios.get(url).then(response => {
+              this.pokemons.push({
+                id: response.data.id,
+                name: response.data.name
+              });
+            });
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

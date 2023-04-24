@@ -1,0 +1,49 @@
+<body>
+    KEY = 4eP3fhIi67hIP3U7ecH8L2YRwGWqHLK0K3co7FHU
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mt-5">
+                        <div class="card" style="width: 50rem;">
+                            <h5 class="card-title">NASA TITULO: IMAGEN</h5>
+                            <img :src="imgSrc" class="card-img-top" :alt="imgTitle" height="300" width="500">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ imgTitle }}</h5>
+                                <p class="card-text">{{ imgExplanation }}</p>
+                                <a :href="imgSrc" target="_blank" class="btn btn-primary">View Image</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        var ApiKey = '4eP3fhIi67hIP3U7ecH8L2YRwGWqHLK0K3co7FHU';
+        var url = 'https://api.nasa.gov/planetary/apod?api_key=' + ApiKey;
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                imgSrc: '',
+                imgTitle: '',
+                imgExplanation: '',
+                imgDate: '',
+                imgUrl: '',
+            },
+        });
+
+        axios.get(url).then(function (response) {
+            vm.imgSrc = response.data.url;
+            vm.imgTitle = response.data.Tile;
+            vm.imgExplanation = response.data.Explanation;
+            vm.imgDate = response.data.Date;
+            vm.imgUrl = response.data.url;
+
+        })
+    </script>
+</body>
